@@ -1,1 +1,0 @@
-pedirDatos = float(inpunt("Pedir datos:"))
