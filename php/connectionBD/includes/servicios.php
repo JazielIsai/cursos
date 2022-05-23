@@ -2,6 +2,6 @@
 
 require 'functions.php';
 
-$servicios = obtenerServicios();
+$services = obtenerServicios();
 
-echo json_encode($servicios);
+echo json_encode($services);

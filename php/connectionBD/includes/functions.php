@@ -8,7 +8,7 @@ function obtenerServicios() : array {
         //var_dump($db);
 
         ///Escribir un codigo sql
-        $query = 'select * from servicios';
+        $query = 'select * from test_position';
 
         $consulta = mysqli_query($db, $query);
 
@@ -20,9 +20,9 @@ function obtenerServicios() : array {
         //obtener los resultados
 
         while($row = mysqli_fetch_assoc($consulta)){
-            $servicios[$i]['id'] = $row['id'];
-            $servicios[$i]['nombre'] = $row['nombre'];
-            $servicios[$i]['precio'] = $row['precio'];
+            $servicios[$i]['id_workflow'] = $row['id_workflow'];
+            $servicios[$i]['x_axis'] = $row['x_axis'];
+            $servicios[$i]['y_axis'] = $row['y_axis'];
 
             $i++;
         }   

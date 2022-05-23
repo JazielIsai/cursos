@@ -1,13 +1,19 @@
-<?php 
+<?php
+$user = "root";
+$pass = "";
+$host = "localhost";
+$name_bd = "prueba";
+$port = 3307;
 
-$db = mysqli_connect('localhost', 'root', '1234', 'appsalon');
+
+$db = mysqli_connect($host, $user, $pass, $name_bd, $port);
 
 
 if(!$db){
-    echo 'Error en la conexion';
+    echo "No se ha podido conectar con el servidor";
     exit;
 } else {
     echo 'conexion establecida';
 }
 
-?>
+
