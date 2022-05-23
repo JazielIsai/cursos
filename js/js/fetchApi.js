@@ -41,12 +41,56 @@ function obtenerEmpleado() {
 
 //uso de fetch api con async / await
 
+
 async function obtenerEmpleados() {
-    const archivo = './js/empleados.json';
+    let categoria = [  ];
+
+    const archivo = 'http://viperdb.scripps.edu/Lab/Workflow/nodes.php?serviceName=get_nodes';
 
     const resultado = await fetch(archivo);
+    console.log(resultado)
     const datos = await resultado.json();
     console.log(datos);
+
+    // categoria = datos.map( dt => {
+    //     return dt.category
+    //     // if( categoria.includes( data.category )  ){
+    //     // } else {
+    //     //     categoria.push(data.category);
+    //     // }
+    // } )
+
+    // categoria = datos.reduce( (acc, node, index) =>{
+    //     acc[node.category] = ( acc[node.category] || '' ) + [node.name, node.idnode, ' '] 
+    //     return acc;
+    // }, {} )
+
+    categoria = datos.reduce( (category, node, key) => {
+        (category[node.category] || (category[node.category] = [])).push( { name: node.name, idnode: node.idnode } );
+        return category
+    }, {} )
+
+    const categorias = datos.map( category => category.category )
+    // let includeCategory;
+
+    // for (getNodeForCategory in data) {
+        
+    // }
+
+    return categoria;
+
 }
 
-obtenerEmpleados();
+let dt;
+
+obtenerEmpleados()
+    .then( (data) => { 
+       dt = data 
+       
+       console.log("datos: ", dt)
+       
+       
+
+    });
+
+

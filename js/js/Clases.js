@@ -27,15 +27,15 @@ class inventario
     }
 }
 
-var libros = new inventario("Libro");
-libros.add("Angualar.js",3);
-libros.add("JavaScript", 10);
-libros.add("Node js", 5);
+var book = new inventario("Libro");
+book.add("Angualar.js",3);
+book.add("JavaScript", 10);
+book.add("Node js", 5);
 
-libros.cantidad("Angular.js");
-libros.cantidad("JavaScript");
-libros.borrar("Angular.js");
-libros.cantidad("JavaScript");
+book.cantidad("Angular.js");
+book.cantidad("JavaScript");
+book.borrar("Angular.js");
+book.cantidad("JavaScript");
 
 
 
