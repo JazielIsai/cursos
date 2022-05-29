@@ -1,19 +1,19 @@
-export function createCardEvent() {
+export function createCardEvent(dataEvent) {
     return `
     <div class="movie_card" id="bright">
         <div class="info_section">
             <div class="movie_header">
                 <img class="locandina" src="https://www.elsoldedurango.com.mx/incoming/lbc3vb-torneo-de-ajedrez-en-movimiento/ALTERNATES/LANDSCAPE_960/Torneo%20de%20Ajedrez%20en%20Movimiento"/>
                 <div>
-                    <h2>Concurso de Ajedrez</h2>
-                    <h4> 21/09/2022 </h4>
-                    <span class="minutes">09:30am</span>
-                    <p class="type"> Ajedrez, Ajedrez </p>
+                    <h2> ${dataEvent?.name_event} </h2>
+                    <h4> ${dataEvent?.date_event} </h4>
+                    <span class="minutes"> ${dataEvent?.time_event} </span>
+                    <p class="type"> ${dataEvent?.place_event} </p>
                 </div>
             </div>
             <div class="movie_desc">
                 <p class="text">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                    ${dataEvent?.description_event}
                 </p>
             </div>
             <div class="movie_social">
@@ -33,7 +33,7 @@ export function createCardEvent() {
 
                 </ul>
             </div>
-        div>
+        </div>
     </div>
     `
 }

@@ -106,7 +106,7 @@
                         <input type="button" value="Crear Club " class="btn btn-primary" id="create_club_btn"  /> 
                     </div>
                     <div class="section_create_form">
-                        <form class="form_create">
+                        <form class="form_create" onsubmit="return false;" id="create_club_form">
                             <div class="form-group">
                                 <label for="name_club"> Name Club: </label>
                                 <input type="text" class="form-control" id="name_club" placeholder="Ej: Ajedrez" name="name_club" />
@@ -150,7 +150,7 @@
                     </div>
 
                     <div class="section_create_form">
-                        <form class="form_create">
+                        <form class="form_create" onsubmit="return false;" id="create_events_form">
                             <div class="form-group">
                                 <label for="name_event"> Nombre del evento: </label>
                                 <input type="text" class="form-control" id="name_event" placeholder="Ej: Concurso estatal de ajedrez" name="name_event" />
@@ -172,6 +172,14 @@
                                 <label for="date_event"> Fecha del evento: </label>
                                 <input type="date" class="form-control" id="date_event" name="date_event" />
                             </div>
+                            <div class="form-group">
+                                <label for="time_event"> Hora del evento: </label>
+                                <input type="time" id="time_event" name="time_event" min="06:00" max="21:00" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="place_event"> Lugar del evento: </label>
+                                <input type="text" class="form-control" id="place_event" placeholder="Ej: ITESI" name="place_event" />
+                            </div>
                             <div class="form-group submit_create_club_wrap_btn">
                                 <input type="submit" class="btn btn-success" value="Crear" id="submit_form_create_event" />
                             </div>
@@ -192,27 +200,27 @@
                     </div>
 
                     <div class="section_create_form">
-                        <form class="form_create">
+                        <form class="form_create" onsubmit="return false;" id="create_activities_form">
                             <div class="form-group">
-                                <label for="name_activity"> Nombre de la Actividad: </label>
-                                <input type="text" class="form-control" id="name_activity" placeholder="Ej: Realizar 5 exposiciones" name="name_activity" />
+                                <label for="name_activities"> Nombre de la Actividad: </label>
+                                <input type="text" class="form-control" id="name_activities" placeholder="Ej: Realizar 5 exposiciones" name="name_activities" required/>
                             </div>
                             <div class="form-group">
-                                <label for="description_activity"> Descripción de la Actividad: </label>
-                                <input type="text" class="form-control" id="description_activity" placeholder="Descripción... " name="description_activity" />
+                                <label for="description_activities"> Descripción de la Actividad: </label>
+                                <input type="text" class="form-control" id="description_activities" placeholder="Descripción... " name="description_activities" required/>
                             </div>
                             <div class="form-group">
-                                <label for="activity_focus"> Enfoque de la Actividad: </label>
-                                <select type="text" class="form-control" id="activity_focus" name="activity_focus" >
+                                <label for="activities_focus"> Enfoque de la Actividad: </label>
+                                <select type="text" class="form-control" id="activities_focus" name="activities_focus" required>
                                     <option value="">Escoja una opción</option>
-                                    <option value=""> Liderazgo </option>
-                                    <option value=""> Trabajo en Equipo </option>
-                                    <option value=""> Comunicación </option>
+                                    <option value="Liderazgo"> Liderazgo </option>
+                                    <option value="Trabajo en Equipo"> Trabajo en Equipo </option>
+                                    <option value="Comunicación"> Comunicación </option>
                                 </select>
                             </div>
                             <div class="form-group">
-                                <label for="date_event"> Fecha del evento: </label>
-                                <input type="date" class="form-control" id="date_event" name="date_event" />
+                                <label for="date_activities"> Fecha limte de la actividad: </label>
+                                <input type="date" class="form-control" id="date_activities" name="date_activities" />
                             </div>
                             <div class="form-group submit_create_club_wrap_btn">
                                 <input type="submit" class="btn btn-success" value="Crear" id="submit_form_create_activities" />
@@ -224,19 +232,19 @@
                         <table class="table">
                             <thead>
                                 <tr>
-                                    <th scope="col">#</th>
-                                    <th scope="col">First</th>
-                                    <th scope="col">Last</th>
-                                    <th scope="col">Handle</th>
+                                    <th scope="col">Nombre:</th>
+                                    <th scope="col">Descripción:</th>
+                                    <th scope="col">Enfoque: </th>
+                                    <th scope="col"> Fecha limite: </th>
                                 </tr>
                             </thead>
                             <tbody class="table_body_activities">
-                                <tr>
-                                    <th scope="row">2</th>
+                                <!-- <tr>
                                     <td>Jacob</td>
                                     <td>Thornton</td>
                                     <td>@fat</td>
-                                </tr>
+                                    <td></td>
+                                </tr> -->
 
                             </tbody>
                         </table>
