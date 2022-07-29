@@ -2,16 +2,16 @@ import {createCardClub} from "./createClub.js";
 import {createCardEvent} from "./createEvents.js";
 import {createTableActivities} from "./createTableActivities.js";
 
-// call the form for create clubs
+// call the form for create clubs or events or the activities 
 let $create_club_btn = $("#create_club_btn");
 let $create_event_btn = $("#create_event_btn");
 let $create_activity_btn = $("#create_activity_btn");
 
-
+//generic class for show or hide the form
 let $section_create_form = $(".section_create_form");
 
 
-// crrate the form and save in the section
+// create the form and save in the section
 let $add_card_club = $("#create_club_form");
 let $add_card_event = $("#create_events_form");
 let $add_table_activities = $("#create_activities_form");

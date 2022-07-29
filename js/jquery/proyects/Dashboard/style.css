@@ -81,11 +81,11 @@ ul {
 
 .viewport {
   display: flex;
-  min-width: calc(100vw - 25rem - 5rem);
+  min-width: calc(100vw - 15rem - 5rem);
 }
 
 .sidebar {
-  max-width: 25rem;
+  max-width: 15rem;
   height: 100vh;
   background-color: var(---sidebarColor);
   overflow-y: scroll;
